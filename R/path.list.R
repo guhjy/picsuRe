@@ -16,8 +16,7 @@ path.list <- function(env, var, token, verbose = FALSE) {
     path <- as.character(sapply(path, "[", "pui"))
     if (dirname(e) != ".")  path <- path[grepl(URLencode(dirname(e), reserved = TRUE), sapply(path, URLencode, reserved = TRUE))]
     if (all(is.na(path))) {
-      message(paste0("\nNo variables associated with: ", e, ", please check the spelling."))
-      next
+      message(paste0("\nNo variables associated with: ", e, "\nPlease check the spelling, or see if there is any forbidden character such as forward slashes, trailing spaces. If so, ask the developpers to remove them."))
     } else {
       if (verbose)  message(paste0("\nRetrieving all variables associated with: ", e))
       plist <- flatten.tree(env, path, token, verbose)
