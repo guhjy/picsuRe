@@ -16,7 +16,8 @@ path.list <- function(env, var, token, verbose = FALSE) {
     path <- as.character(sapply(path, "[", "pui"))
     if (dirname(e) != ".")  path <- path[grepl(URLencode(dirname(e), reserved = TRUE), sapply(path, URLencode, reserved = TRUE))]
     if (all(is.na(path))) {
-      message(paste0("\nNo variables associated with: ", e, "\nPlease check the spelling, or see if there is any forbidden character such as forward slashes, trailing spaces. If so, ask the developpers to remove them."))
+      message(paste0("\nNo variables associated with: ", e,
+                     "\nPlease check the spelling, or see if there is any forbidden character such as forward slashes, trailing spaces. If so, ask the developpers to remove them."))
     } else {
       if (verbose)  message(paste0("\nRetrieving all variables associated with: ", e))
       plist <- flatten.tree(env, path, token, verbose)
@@ -24,13 +25,9 @@ path.list <- function(env, var, token, verbose = FALSE) {
     }
   })
 
-  if (length(pathlist) != 0)  {
-    return(pathlist)
-
-    } else {
-
+  if (length(pathlist) != 0)  return(pathlist)
+  else {
     if (verbose) message('  No path found using the "find" function, trying the old-fasion way')
-
 
     ## go old school
     pathlist <- list()
