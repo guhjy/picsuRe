@@ -1,4 +1,6 @@
 #' @author Gregoire Versmee, Laura Versmee, Mikael Dusenne
+#' @export nicer.result
+
 
 nicer.result <- function(result, allpaths, verbose = FALSE)  {
 

@@ -1,4 +1,5 @@
 #' @author Gregoire Versmee, Laura Versmee
+#' @export query.select
 
 query.select <- function(pathlist, verbose = FALSE)  {
 

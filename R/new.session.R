@@ -1,4 +1,5 @@
 #' @author Gregoire Versmee, Laura Versmee
+#' @export new.session
 
 
 new.session <- function(env, key, verbose = FALSE)  {

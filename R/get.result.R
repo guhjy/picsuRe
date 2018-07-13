@@ -1,4 +1,5 @@
 #' @author Gregoire Versmee
+#' @export get.result
 
 get.result <- function(env, resultID, allpaths, token, verbose = FALSE) {
 

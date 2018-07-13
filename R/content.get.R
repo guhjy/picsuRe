@@ -1,5 +1,6 @@
 #' @author Gregoire Versmee, Laura Versmee
 #' @import httr
+#' @export content.get
 
 content.get <- function(url, token, verbose = FALSE) {
 

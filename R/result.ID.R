@@ -1,4 +1,5 @@
 #' @author Gregoire Versmee, Laura Versmee
+#' @export result.ID
 
 result.ID <- function(env, body, token, verbose = FALSE) {
 

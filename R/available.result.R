@@ -1,4 +1,5 @@
 #' @author Gregoire Versmee, Laura Versmee
+#' @export available.result
 
 available.result <- function(env, resultID, token, verbose = FALSE) {
 

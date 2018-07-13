@@ -1,4 +1,6 @@
 #' @author Gregoire Versmee, Mikael Dusenne, Laura Versmee
+#' @export flatten.tree
+
 
 flatten.tree <- function(env, path, token, verbose = FALSE)  {
 
