@@ -26,7 +26,7 @@ path.list <- function(env, var, token, verbose = FALSE) {
     }
   })
 
-  if (length(pathlist) != 0)  return(pathlist)
+  if (length(pathlist)!=0)  return(pathlist)
   else {
     if (verbose) message('  No path found using the "find" function, trying the old-fasion way')
 
