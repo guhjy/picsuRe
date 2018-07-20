@@ -16,11 +16,12 @@ agr <- function(doid, output = "table", includechildren = FALSE) {
     references <- as.character(sapply(sapply(sapply(agr$annotations, `[`, "publications"), `[`, 1), `[`, "pubMedId"))
     refurl <- as.character(sapply(sapply(sapply(agr$annotations, `[`, "publications"), `[`, 1), `[`, "pubMedUrl"))
    
-    return(data.frame(cbind(disease, symbol, species, associationtype, evidencecode, references, refurl)))
+    return(data.frame(cbind(symbol, species, associationtype, disease, evidencecode, references, refurl)))
   }
 
-    if (output == "definition") return(agr$definition)
-    if (output == "synonyms") return(as.character(agr$synonyms))
-    if (output == "crossreferences") return(agr$crossReferences[[1]])
+  if (output == "disease") return(agr$name)
+  if (output == "definition") return(agr$definition)
+  if (output == "synonyms") return(as.character(agr$synonyms))
+  if (output == "crossreferences") return(agr$crossReferences[[1]])
 
 }
